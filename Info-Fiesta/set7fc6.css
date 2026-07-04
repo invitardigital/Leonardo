@@ -1,0 +1,305 @@
+@font-face{
+    font-family: 'ComicHero';
+    src: url("../AnimeAce3BB_Bold.otf");
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'BatmanComic';
+    src: url("../Adventure.otf");
+    font-display: swap;
+}
+
+:root{
+    --color-elements:rgb(16, 155, 255);
+    --button-blue: rgb(0, 81, 194);
+    --font-spidey: 'ComicHero', system-ui, sans-serif;
+    --font-batman-comic: 'BatmanComic', var(--font-spidey);
+}
+
+
+main, .background {
+    /* height: 120vh; */
+    overflow-y: hidden;
+    height: 100%!important;
+    padding-bottom: 20px;
+}
+
+.main{
+    border: 2px solid #ff2626 ;
+    background: rgba(255, 255, 255, 0.217);
+    font-family: var(--font-spidey);
+    letter-spacing: 0;
+}
+
+.esconder{
+    font-size: 1px !important;
+    color: transparent !important;
+    text-shadow: none !important;
+}
+
+/* CAMBIAR EL BACKGROUND */
+.background{
+    background: url(../media/backgrounds/spidey.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: moveBackgorund 30s infinite;
+}
+
+:root{
+    --shadow: 0px 2px 2px #000000, 0px -2px 2px #000000, 2px 0px 2px #000000, -2px -0px 2px #000000;
+}
+
+.descripcion{
+    width: 90%;
+    padding: 0px;
+    margin-bottom: -10px;
+    font-size: 14px;
+}
+
+/* NOMBRE */
+.titulo h1{
+    font-family: var(--font-batman-comic);
+    font-size: 56px;
+    color: rgb(0, 162, 255);
+    text-shadow: var(--shadow);
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* CUMPLE */
+.titulo h2{
+    font-family: var(--font-spidey);
+    color: #ffffff;
+    text-shadow: var(--shadow);
+}
+/* IMAGEN NUMERO */
+.titulo img{
+    width: 200px;
+    margin-top: 8px;
+    margin-bottom: -10px;
+}
+
+/* FECHA */
+.fecha span{
+    font-family: var(--font-spidey);
+    color: #ffffff;
+    text-shadow: var(--shadow);
+}
+.countdown-container{
+    font-family: var(--font-batman-comic);
+    width: 100%;
+    justify-content: space-between;
+    border: 4px solid var(--button-blue);
+    background: rgba(255, 255, 255, 0.664); /* Fondo translúcido */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra suave */
+    -webkit-backdrop-filter: blur(50px); /* Fondo desenfocado */
+    color: var(--button-blue);
+}
+
+#countdown{
+    width: 98%;
+}
+
+.countdown-container .segment{
+    flex: 1;
+    min-width: 0;
+    margin: 8px 2px;
+}
+
+.countdown-container .number{
+    font-size: clamp(28px, 7vw, 38px) !important;
+    line-height: 1;
+}
+
+.countdown-container .unit{
+    font-size: clamp(15px, 3.7vw, 21px) !important;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.faltan div{
+    font-family: var(--font-batman-comic);
+    background-color: var(--button-blue);
+    color: white;
+    transform: translateY(15px);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+/* VESTIMENTA */
+.vestimenta img{
+    width: 80px;
+}
+
+.vestimenta span{
+    font-family: var(--font-spidey);
+    color: #ffffff;
+    text-shadow: var(--shadow);
+}
+
+/* Salón Belanova */
+.descripcion span{
+    color: rgb(255, 255, 255);
+    width: 90%;
+    padding: 0px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* BOTONES */
+.buttons a{
+    font-family: var(--font-spidey);
+    color: white;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--button-blue);
+    gap: 5px;
+}
+
+@media (min-width: 900px){
+    .countdown-container .segment{
+        margin: 12px 8px;
+    }
+
+    .countdown-container .number{
+        font-size: 42px !important;
+    }
+
+    .countdown-container .unit{
+        font-size: 23px !important;
+    }
+}
+
+/* lEYENDA */
+.leyenda span{
+    font-family: var(--font-spidey);
+    color: #ffffff;
+    text-shadow: var(--shadow);
+    font-size: 26px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+
+
+
+/* REPRODUCTOR */
+/* bolita */
+input[type=range]::-webkit-slider-thumb {
+    background-color: #e2e2e2c9;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--button-blue);
+    border-radius: 50%;
+    margin-top: -9px;
+}
+/* barra */
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: var(--button-blue) !important;
+    height: 4px;
+}
+/* boton Play Pause */
+#play-pause-button{
+    background-color: rgba(0, 81, 194, 0.84) !important;
+}
+/* svg play */
+.icon-tabler-player-play-filled path:nth-child(2){
+    fill: #ffffff; 
+}
+  /* svg pause */
+.icon-tabler-player-pause-filled  path:nth-child(2), .icon-tabler-player-pause-filled path:nth-child(3){
+    fill: #ffffff; 
+}
+
+
+
+
+
+/* DECORATIONS */
+.img1{
+    width: 160px;
+    left: -55px;
+    /* transform: translateY(100px) translateX(-150px) rotate(20deg); */
+    animation: img1Animate 9s infinite;
+}
+
+.img2{
+    width: 205px;
+    right: -20px;
+    /* transform: translateY(100px) translateX(200px) rotate(-35deg); */
+    animation: img2Animate 12s infinite;
+}
+
+.img3{
+    width: 150px;
+    right: -10px;
+    z-index: -1;
+    /* transform: translateY(20px) translateX(90px) rotate(-35deg); */
+    animation: img3Animate 10s infinite;
+}
+
+.img4{
+    width: 230px;
+    left: -70px;
+    z-index: -1;
+    /* transform: translateY(50px) translateX(-150px) rotate(20deg); */
+    animation: img4Animate 12s infinite;
+}
+
+
+@keyframes img1Animate {
+    0%{
+        transform: translateY(190px) rotate(10deg);
+    }
+    50%{
+        transform: translateY(-50px) rotate(-10deg);
+    }
+    100%{
+        transform: translateY(190px) rotate(10deg);
+    }
+}
+
+
+@keyframes img2Animate {
+    0%{
+        transform: translateY(170px) rotate(-5deg);
+    }
+    50%{
+        transform: translateY(-50px) rotate(5deg);
+    }
+    
+    100%{
+        transform: translateY(170px) rotate(-5deg);
+    }
+}
+
+
+@keyframes img3Animate {
+    0%{
+        transform: translateY(20px) rotate(-10deg);
+    }
+    50%{
+        transform: translateY(-200px) rotate(10deg);
+    }
+    100%{
+        transform: translateY(20px) rotate(-10deg);
+    }
+}
+
+@keyframes img4Animate {
+    0%{
+        transform: translateY(20px) rotate(10deg);
+    }
+    50%{
+        transform: translateY(-150px) rotate(-10deg);
+    }
+    100%{
+        transform: translateY(20px) rotate(10deg);
+    }
+}
